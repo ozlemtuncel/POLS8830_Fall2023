@@ -31,6 +31,9 @@ layout: default
 
 > ⚠️ Our library offers online R workshops, and I highly recommend them! 
 
+**Review of R**
+I recommend Adam Kuczynski's (University of Washington) to review R: [Adam's Guide to R](https://adamkucz.github.io/psych548/)
+
 **Learning LaTeX**
 I encourage all of you to get familiar with **LaTeX** or similar kind of document preparation system to typset your problem sets. GSU offers online/in-person LaTeX course. I use Overleaf for typetting these sort of documents. Recently, I have been using Quarto in R and Phyton to typeset reports and presentations. Here are some useful links to learn LaTeX:
 
