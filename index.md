@@ -24,7 +24,7 @@ layout: default
 ### Class materials 
 [Week 1 Slides](docs/)
 
-[Ozlem's notes from Week 1 class](docs/week1.md)
+[Ozlem's notes from Week 1 class](docs/week1*.md)
 
 ### Software and others
 > ✔️ Goal: Make sure you are familiar with basics of R.
@@ -54,7 +54,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 2 Slides](docs/)
 
-[Ozlem's notes from Week 2 class](docs/week2.md) 
+[Ozlem's notes from Week 2 class](docs/week2*.md) 
 
 ### Software and others 
 
@@ -63,7 +63,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 3 Slides](docs/)
 
-[Ozlem's notes from Week 3 class](docs/week3.md) 
+[Ozlem's notes from Week 3 class](docs/week3*.md) 
 
 ### Software and others 
 
@@ -72,7 +72,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 4 Slides](docs/)
 
-[Ozlem's notes from Week 4 class](docs/week4.md) 
+[Ozlem's notes from Week 4 class](docs/week4*.md) 
 
 ### Software and others 
 
@@ -81,7 +81,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 5 Slides](docs/)
 
-[Ozlem's notes from Week 5 class](docs/week5.md) 
+[Ozlem's notes from Week 5 class](docs/week5*.md) 
 
 ### Software and others 
 
@@ -90,7 +90,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 6 Slides](docs/)
 
-[Ozlem's notes from Week 6 class](docs/week6.md) 
+[Ozlem's notes from Week 6 class](docs/week6*.md) 
 
 ### Software and others 
 
@@ -99,7 +99,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 7 Slides](docs/)
 
-[Ozlem's notes from Week 7 class](docs/week7.md) 
+[Ozlem's notes from Week 7 class](docs/week7*.md) 
 
 ### Software and others 
 
@@ -108,7 +108,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 8 Slides](docs/)
 
-[Ozlem's notes from Week 8 class](docs/week8.md) 
+[Ozlem's notes from Week 8 class](docs/week8*.md) 
 
 ### Software and others 
 
@@ -117,7 +117,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 9 Slides](docs/)
 
-[Ozlem's notes from Week 9 class](docs/week9.md) 
+[Ozlem's notes from Week 9 class](docs/week9*.md) 
 
 ### Software and others 
 
@@ -126,7 +126,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 10 Slides](docs/)
 
-[Ozlem's notes from Week 10 class](docs/week10.md) 
+[Ozlem's notes from Week 10 class](docs/week10*.md) 
 
 ### Software and others 
 
@@ -135,7 +135,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 11 Slides](docs/)
 
-[Ozlem's notes from Week 11 class](docs/week11.md) 
+[Ozlem's notes from Week 11 class](docs/week11*.md) 
 
 ### Software and others 
 
@@ -144,6 +144,6 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ### Class materials 
 [Week 12 Slides](docs/)
 
-[Ozlem's notes from Week 12 class](docs/week12.md) 
+[Ozlem's notes from Week 12 class](docs/week12*.md) 
 
 ### Software and others 
