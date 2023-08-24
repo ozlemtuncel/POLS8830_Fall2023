@@ -1,11 +1,11 @@
-# Week 1: Introduction to Matrix Algebra (01/12/2023)
+# Week 1: Review of Matrix Algebra (08/23/2023)
 Ozlem Tuncel 
 
 otuncelgurlek1@gsu.edu
 
 > ⚠️ **CAUTION**: DO NOT SOLELY RELY ON MY NOTES. THERE MIGHT BE TYPOS AND MISTAKES. ALWAYS TAKE YOUR NOTES!
 
-✔️ The goal of this week is to familiarize yourselves with a few basic math concepts that will help us in OLS. These concepts are:
+✔️ The goal of this week is to remember key terms and rules of matrix algebar. Some of these important concepts are:
 - **matrix/linear algebra**
 - **statistic** vs **parameter**
 - **vector** and **scalar** 
