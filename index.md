@@ -22,9 +22,9 @@ layout: default
 > ✔️ Goal: Review of the syllabus and last semester.
 
 ### Class materials 
-[Week 1 Slides](docs/)
+[Week 1 Slides](docs/01Matrix.pdf)
 
-[Ozlem's notes from Week 1 class](docs/week1*.md)
+[Ozlem's notes from Week 1 class](docs/week1.md)
 
 ### Software and others
 > ✔️ Goal: Make sure you are familiar with basics of R.
@@ -52,18 +52,22 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 ## Week 2
 
 ### Class materials 
-[Week 2 Slides](docs/)
+[Week 2 Slides](docs/Week 2 OLS Slides.pdf)
 
 [Ozlem's notes from Week 2 class](docs/week2*.md) 
+
+R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) & [Script 2](docs/Week2_Linear_Regression_tidy.R)
 
 ### Software and others 
 
 ## Week 3
 
 ### Class materials 
-[Week 3 Slides](docs/)
+[Week 3 Slides](docs/03MLE.pdf)
 
 [Ozlem's notes from Week 3 class](docs/week3*.md) 
+
+[R script for Week 3](docs/Week3_Reliability_Correlations_Factor Analysis_tidy.R)
 
 ### Software and others 
 
