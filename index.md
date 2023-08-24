@@ -56,7 +56,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 
 [Ozlem's notes from Week 2 class](docs/week2*.md) 
 
-R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) & [Script 2](docs/Week2_Linear_Regression_tidy.R)
+R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) & [Script II](docs/Week2_Linear_Regression_tidy.R)
 
 ### Software and others 
 
