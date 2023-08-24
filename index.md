@@ -4,9 +4,9 @@ layout: default
 
 # Course information
 
-- **Instructor**: Ryan Carlin <rcarlin@gsu.edu>
+- **Instructor**: Ryan Carlin (<rcarlin@gsu.edu>)
 
-- **Teaching Assistant**: Ozlem Tuncel <otuncelgurlek1@gsu.edu>
+- **Teaching Assistant**: Ozlem Tuncel (<otuncelgurlek1@gsu.edu>)
 
 - **Meeting Time**: 4:30-6:00 pm, Tuesday
 
@@ -14,7 +14,7 @@ layout: default
 
 # Ozlem's Office Hours and TA Sessions
 - My office: Langdale Hall Room 1027
-- Office hours: **2:30-4:00 pm every Monday and Tuesday**
+- Office hours: **2:30-4:00 pm every Monday and Thursday**
 
 # Slides, Notes, and Tips
 
