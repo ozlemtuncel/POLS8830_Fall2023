@@ -13,7 +13,7 @@ layout: default
 - **Class Location**: Langdale Hall 1081
 
 # Ozlem's Office Hours and TA Sessions
-- My office: Langdale Hall Room 1027
+- My office: Langdale Hall 1027
 - Office hours: **2:30-4:00 pm every Monday and Thursday**
 
 # Slides, Notes, and Tips
@@ -56,9 +56,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 
 [Ozlem's notes from Week 2 class](docs/week2*.md) 
 
-R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) & [Script II](docs/Week2_Linear_Regression_tidy.R)
-
-### Software and others 
+R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) & [Script II](docs/Week2_Linear_Regression_tidy.R) 
 
 ## Week 3
 
