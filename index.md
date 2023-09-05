@@ -58,10 +58,14 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 
 R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) & [Script II](docs/Week2_Linear_Regression_tidy.R) 
 
+**More info on distributions and OLS**
+- Here is a [website](https://www.rpubs.com/elliottb90/olsassumptions) that shows how to use plots to identify OLS assumptions.
+- Here is a [comparison of probability mass and density functions](https://tinyheero.github.io/2016/03/17/prob-distr.html#properties-of-probability-massdensity-functions).
+
 ## Week 3
 
 ### Class materials 
-[Week 3 Slides](docs/03MLE.pdf)
+[Week 3 Slides](docs/03MLE.pdf) and [Carlin's Notes](docs/Week 4 MLE & GLM.ppt)
 
 [Ozlem's notes from Week 3 class](docs/week3.md) 
 
