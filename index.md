@@ -63,9 +63,7 @@ R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) &
 ### Class materials 
 [Week 3 Slides](docs/03MLE.pdf)
 
-[Ozlem's notes from Week 3 class](docs/week3*.md) 
-
-[R script for Week 3](docs/Week3_Reliability_Correlations_Factor Analysis_tidy.R)
+[Ozlem's notes from Week 3 class](docs/week3.md) 
 
 ### Software and others 
 
