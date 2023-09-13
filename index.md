@@ -69,16 +69,25 @@ R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) &
 
 [Ozlem's notes from Week 3 class](docs/week3.md) 
 
-### Software and others 
+We do not have any R script for this week.
 
 ## Week 4
 
 ### Class materials 
-[Week 4 Slides](docs/)
+[Week 4 Slides](docs/05Logit.pdf)
 
-[Ozlem's notes from Week 4 class](docs/week4*.md) 
+[Ozlem's notes from Week 4 class](docs/week4.md) 
+
+R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Script II](docs/Week4_PRE_tidy.R) 
+
+### Important Note
+❗You can find the change in the syllabus on iCollege. 
 
 ### Software and others 
+- This is a great guide on [logit and probit](https://www.princeton.edu/~otorres/Logit.pdf) although the software is Stata.
+- This is another great source to see how to perform logit and probit in [R, Stata, SAS, and SPSS](https://sites.google.com/site/econometricsacademy/econometrics-models/probit-and-logit-models).
+- I recommend checking [Zelig](http://docs.zeligproject.org/) in detail if you are going to use logistic regression a lot.
+- I also recommend this [Shiny app](https://xiangao.netlify.app/2017/10/26/rare-event/) for comparing logit, rare events, and Firth penalized MLE models.
 
 ## Week 5
 
