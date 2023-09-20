@@ -92,11 +92,13 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 ## Week 5
 
 ### Class materials 
-[Week 5 Slides](docs/)
+[Week 5 Slides](docs/Workflow_in_PoliSci_Research.pdf)
 
-[Ozlem's notes from Week 5 class](docs/week5*.md) 
-
-### Software and others 
+### Notes from Workflow lecture
+- I know I bombarded you with a lot of information on GitHub, LaTeX, and R Studio. Do not be discouraged if you encounter any issues when using these programs. Make sure to read the error message, take a deep breath, and let Google help you.
+- If you want to practice the GitHub exercise by yourself, check the links on my slides, or watch [this YouTube video that I based my own presentation](https://www.youtube.com/watch?v=Cn-72tbRNFc&ab_channel=JohnLittle).
+- Overleaf only allows GitHub and Dropbox version control for premium accounts. Yet, if you are using LaTeX software in your PC, you cannot connect your projects to GitHub like the R project I showed.
+- See [resources part in my website](https://ozlemtuncel.github.io/resources/) for CV, journal article, and Beamer templates in LaTeX. Check Academic and Software for templates. Hint: search ``latex CV template`` or ``beamer template`` in GitHub, you will find a lot of templates that you can fork, copy-paste, and use freely. If I need inspiration that's what I do most of the time.
 
 ## Week 6
 
