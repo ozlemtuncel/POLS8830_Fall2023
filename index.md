@@ -102,6 +102,7 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 
 ### Software Notes
 - I learned using GitHub with R using [this Happy Git with R book](https://happygitwithr.com/).
+- I created these two bug fix files for Zelig and DAMisc packages that are not on CRAN anymore. [Zelig lazy load](docs/Zelig_bug_fix.R) & [DAMisc lazy load](docs/DAMisc_bug_fix.R)
 
 ## Week 6
 
