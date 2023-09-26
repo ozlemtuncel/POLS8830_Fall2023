@@ -25,7 +25,6 @@ library(aod)         # For wald.test
 library(stats4)      # For BIC
 library(haven)       # Import from Stata
 library(gmodels)     # Crosstabs
-library(labelled)    # Dealing with the Imported Stata labels
 library(margins)     # Graphs
 library(jtools)      # Graphs
 library(ggstance)    # Graphs
@@ -72,7 +71,7 @@ stargazer(m1, m2,
           )
 
 # Let's make a coefficients plot (becoming very popular way to show your results)
-# This code using plot_summs did not work for us in the class
+# This code using plot_summs did not work for us in the class last year
 plot_summs(m1, m2, 
                  coefs = c("Income (2)" = "income2",
                            "Income (3)" = "income3",
@@ -141,7 +140,24 @@ m5 <- glm(voteCon ~ economic.cond.national*economic.cond.household + age + Europ
 
 summary(m5)
 
-# Predicted values
+stargazer(m5, type = "text")
+
+# What we can interpret? Sign + significant
+# We cannot say anything about magnitude. 
+# Odds ratio can help but not as much as predicted probabilities 
+
+# Odds ratio calculation:
+exp(coefficients(m5))
+
+# Exponentiating the age coefficient tells us the expected increase in the odds of Conservative vote for each unit of age. 
+
+# An odds ratio of 1 indicates no change, whereas an odds ratio of 2 indicates a doubling, etc.
+
+# For example, if the odds ratio for x1 is 1.5, it means that for a unit increase in x1, the odds of the positive outcome increase by a factor of 1.5, or 50%. Conversely, if the odds ratio for x1 is 0.5, it means that for a unit increase in x1, the odds of the positive outcome decrease by a factor of 0.5, or 50%.
+
+# Your odds ratio of 1.01 implies that a 1 unit increase in age increases the odds of voting for convervatives by a factor of 1.01.
+
+# Predicted probabilities are more intuitive
 plot_model(m5, 
            type = "pred", 
            terms = c("economic.cond.household", "economic.cond.national[1,3,5]")) +
@@ -161,7 +177,7 @@ minneapolis_data <- carData::MplsStops
 # Data manipulation
 CrossTable(minneapolis_data$race)
 
-# Quick probit with interaction variable
+# Quick probit with interaction variable -- very complext
 summary(glm(vehicleSearch ~ race*gender, 
             data = minneapolis_data, 
             family = binomial(link="probit")))
@@ -177,6 +193,9 @@ m6 <- glm(vehicleSearch ~ black*male,
 
 summary(m6)
 
+# Marginal effects are slopes or derivatives 
+# (i.e., effect of changes in a variable on the outcome)
+
 # Let's look at margins in this model
 my_margins <- margins(m6, 
                       variables = c("black"), 
@@ -184,9 +203,7 @@ my_margins <- margins(m6,
 
 summary(my_margins)
 
-# Interpretation
-# The impact of being black increases the probability of vehicle search by 0.08
-# percent points for males.
+# Interpretation: The impact of being black increases the probability of vehicle search by 0.08 percent points for males.
 
 my_margins2 <- margins(m6, 
                       variables = c("male"), 
@@ -194,9 +211,7 @@ my_margins2 <- margins(m6,
 
 summary(my_margins2)
 
-# Interpretation
-# The impact of being male increases the probability of vehicle search by 0.1
-# percent points for blacks.
+# Interpretation: The impact of being male increases the probability of vehicle search by 0.1 percent points for blacks.
 
 # Let's plot predicted probability based on race
 cplot(m6, 
@@ -218,11 +233,11 @@ cplot(m6,
       title(main = "Predicted Probability of Car \n Search Based on Race and Gender"))
 
 # In order to make predicted probability plot in ggplot we need the following
-pd1 <- cplot(m6, x="black", 
-             data=minneapolis_data[minneapolis_data[["male"]]==0,])
+pd1 <- cplot(m6, x = "black", 
+             data = minneapolis_data[minneapolis_data[["male"]]==0,])
 
-pd2 <- cplot(m6, x="black", 
-             data=minneapolis_data[minneapolis_data[["male"]]==1,])
+pd2 <- cplot(m6, x = "black", 
+             data = minneapolis_data[minneapolis_data[["male"]]==1,])
 
 # Put everything in ggplot
 ggplot(pd1, aes(x = xvals)) + # add x values for pd1
