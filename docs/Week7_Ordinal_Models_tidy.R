@@ -55,15 +55,18 @@ summary(world_values)
 ### Ordered logit/probit models ----
 # Running the first polr (ordered logit or probit) model with World Values data
 world_values_fit <- polr(poverty ~ religion + degree + country + age + gender, 
-                         data = world_values, Hess = TRUE)
+                         data = world_values, 
+                         Hess = TRUE) # gives us a matrix of SEs
 
 summary(world_values_fit) # summarizing the results (to include SEs)
 stargazer(world_values_fit, type = "text")
 
 # Brant test for the parallel regression assumption
+# f the probability is greater than your alpha level, then your dataset 
+# satisfies this proportional odds assumption.
 brant(world_values_fit) 
 
-# Proportional Odds test
+# Same test different package -- Proportional Odds test
 poTest(world_values_fit)
 
 ### Try with another dataset
@@ -87,18 +90,21 @@ summary(canadian_election)
 ### Factor issue illustration ----
 # Remember what Ozlem says often ``R is a powerful calculator but not that smart!``
 e1 <- polr(importance ~ abortion + gender + education + urban, 
-           data = canadian_election, Hess = TRUE)
+           data = canadian_election, 
+           Hess = TRUE)
 
 e2 <- polr(importance ~ as.numeric(abortion) + as.numeric(gender) + 
              as.numeric(education) + as.numeric(urban), 
-           data = canadian_election, Hess = TRUE)
+           data = canadian_election, 
+           Hess = TRUE)
 
 stargazer(e1, e2, type = "text")
 
 # Running the second polr model based on Canadian election data
 ces_fit <- polr(importance ~ abortion + gender + education + urban, 
-                data = canadian_election, Hess = TRUE)
-summary(ces_fit)
+                data = canadian_election, 
+                Hess = TRUE)
+
 stargazer(ces_fit, type = "text")
 brant(ces_fit)
 poTest(ces_fit)
@@ -135,14 +141,16 @@ CrossTable(women_labor$partic)
 
 # Running the third polr model based on Women's Labor data
 women_labor_fit <- polr(partic ~ hincome + children + region,
-                        data = women_labor, Hess = TRUE)
+                        data = women_labor, 
+                        Hess = TRUE)
+
 summary(women_labor_fit)
 stargazer(women_labor_fit, type = "text")
 brant(women_labor_fit)
 poTest(women_labor_fit)
 
 ### Margins ----
-# Making all variables numeric for use with margins
+# Making all variables numeric so that we can use margins
 # We are doing this because of how our variables are coded
 world_values2 <- data.frame(lapply(world_values, as.numeric))
 canadian_election2 <- data.frame(lapply(canadian_election, as.numeric))
@@ -159,13 +167,10 @@ women_labor_fit2 <- polr(as.factor(partic) ~ hincome + children + region,
                          data = women_labor2, Hess = TRUE)
 
 ### PLA Testing ----
-brant(world_values_fit2)
 poTest(world_values_fit2)
 
-brant(canadian_election_fit2)
 poTest(canadian_election_fit2)
 
-brant(women_labor_fit2)
 poTest(women_labor_fit2)
 
 # Cumulative Link Models ----
@@ -177,7 +182,7 @@ clm_fit <- clm(as.factor(poverty) ~ religion + age + gender,
 summary(clm_fit)
 
 # Excluding those covariates that violate the PLA for use in margins and predicted probabilities 
-# CLM is a better approach, but the clm isn't generally supported 
+# CLM is a better approach, but the clm is not generally supported in various packages 
 
 world_values_clm <- polr(as.factor(poverty) ~ religion + age + gender, 
                           data = world_values2, Hess = TRUE)
@@ -195,12 +200,26 @@ halt
 
 # Margins for World Values data
 world_values_m <- margins(world_values_fit)
+
+# The average marginal effect gives you an effect on the probability, 
+# i.e. a number between 0 and 1. It is the average change in probability when 
+# x increases by one unit. Since a logit/probit/ordinal is a non-linear model, that effect 
+# will differ from individual to individual. What the average marginal effect 
+# does is compute it for each individual and than compute the average. 
+# To get the effect on the percentage you need to multiply by a 100.
 summary(world_values_m)
 
-world_values_m_reli <- margins(world_values_fit2, at = list(religion=1:2))
-world_values_m_degr <- margins(world_values_fit2, at = list(degree=1:2))
-world_values_m_coun <- margins(world_values_fit2, at = list(country=1:4))
-world_values_m_age <- margins(world_values_fit2, at = list(age = min(world_values$age):max(world_values$age)))
+# Interpretation
+# On average, being from Sweden (compared to being from Australia) increases 
+# the likelihood of how people view poverty management by 0.15 percent points (or 15 percent). 
+
+# You can get margins for specific values of these variables 
+table(world_values$religion)
+world_values_m_reli <- margins(world_values_fit2, at = list(religion = 1:2))
+world_values_m_degr <- margins(world_values_fit2, at = list(degree = 1:2))
+world_values_m_coun <- margins(world_values_fit2, at = list(country = 1:4))
+table(world_values$age)
+world_values_m_age  <- margins(world_values_fit2, at = list(age = min(world_values$age):max(world_values$age)))
 world_values_m_gend <- margins(world_values_fit2, at = list(gender = 1:2))
 world_values_m_full <- margins(world_values_fit2, at = list(religion=1:2, degree=1:2, country=1:4, age=mean(world_values$age), gender=1:2))
 
@@ -245,7 +264,8 @@ women_labor_m_regi
 summary(women_labor_m_full)
 
 ### Predicted Probabilities: Basic format ----
-summary(women_labor_clm) # Reminder of the model being used
+### Russ's suggestion (this is quite useful sometimes)
+summary(women_labor_clm) # Model we decided to use
 
 # These are the predicted probabilities based on the mean value of all variables in the model
 women_labor_pred <- predict(women_labor_clm, type = "probs") 
@@ -262,46 +282,35 @@ pred_data_1[, c("pred.prob")] <- predict(women_labor_clm,
 # Read as the predicted probability of response at each category, based on the IV value
 pred_data_1 
 
-
 # Or, Ozlem has the following alternative.
 # We could do  all of this with a single line of code!
-mean(women_labor$hincome)
+ggpredict(world_values_fit, terms = "region [1:5]")
 
+# Let's try another variable Ozlem's version
+ggpredict(world_values_fit, terms = c("age", "country")) |> plot()
+
+# Or let's get something very specific
+mean(world_values$age)
 
 ggpredict(world_values_fit, 
-          condition = c(country = "USA", religion = "yes",
-                        degree = "yes", gender = "male", age = 30)) %>% 
+          terms = "gender",
+          condition = c(country = "USA", 
+                        religion = "yes", 
+                        degree = "yes", 
+                        gender = "male", 
+                        age = 45)) |> 
   plot()
 
-
-
-ggpredict(world_values_fit, terms = c("age", "country")) %>%
-  plot()
-
-# In essence, what ggpredict() returns, are not average marginal effects, but rather the predicted values at different values of x (possibly adjusted for co-variates, also called non-focal terms).
+# In essence, what ggpredict() returns, are not average marginal effects, 
+# but rather the predicted values at different values of x (possibly adjusted 
+# for co-variates, also called non-focal terms).
 
 # A bit more involved example: where religion is held at the median 
 # (given that it is a binary variable). Age and gender are allowed to vary
-# Note how each combination is included with 2 binary vars
-stargazer(world_values_clm, type = "text")
-summary(world_values_clm)
-
-pred_data_3 <- data.frame(religion = rep(median(as.numeric(world_values$religion)), 4),
-                     age = c(1, 2, 1, 2),
-                     gender = c(1, 1, 2, 2))
-
-pred_data_3[, c("pred.prob")] <- predict(world_values_clm, 
-                                         newdata = pred_data_3, 
-                                         type = "probs", 
-                                         se.fit = TRUE)
-
-pred_data_3
-
-# Or, Ozlem has the following alternative. 
-# We can do these alternatively like this -- much shorter 
 median(as.numeric(world_values$religion))
 
-ggpredict(world_values_clm, terms = c("age", "gender"),
+ggpredict(world_values_clm, 
+          terms = c("age", "gender"),
           condition = c(religion = 2))
 
 # Scaling upwards in complexity
@@ -313,7 +322,7 @@ summary(canadian_election_fit2)
 pred_data_4 <- data.frame(abortion = rep(1, 6),
                      gender = rep(1, 6),
                      urban = rep(1, 6),
-                     education = c(1, 2, 3, 4, 5, 6))
+                     education = c(1, 2, 3, 4, 5, 6)) # there are 6 categories of education
 
 
 pred_data_5 <- data.frame(abortion = c(1, 1, 1, 1, 1, 1),
@@ -377,9 +386,9 @@ ggpredict(canadian_election_fit2,
 # Note the use of median over mean in these - they are binary so a value of 1.6 
 # doesn't make logical sense
 
-pred_data_7 <- data.frame(abortion = rep(median(canadian_election2$abortion),6),
-                     gender = rep(median(canadian_election2$gender),6),
-                     urban = rep(median(canadian_election2$urban),6),
+pred_data_7 <- data.frame(abortion = rep(median(canadian_election2$abortion), 6),
+                     gender = rep(median(canadian_election2$gender), 6),
+                     urban = rep(median(canadian_election2$urban), 6),
                      education = c(1, 2, 3, 4, 5, 6)) 
  
 pred_data_7[, c("pred.prob")] <- predict(canadian_election_fit2, 
@@ -405,11 +414,13 @@ ggpredict(canadian_election_fit2,
 
 # 1: Visualization from effects package
 # In this example, you want to examine education variable
-plot(Effect(focal.predictors = c("education"), mod = canadian_election_fit2), 
-               rug = FALSE, 
-     style = "stacked", 
-     main = "Effect of Education on Probability of Religious Importance",
-     ylab = "Probability of Importance Response")
+plot(
+  Effect(focal.predictors = c("education"), 
+         mod = canadian_election_fit2), 
+         rug = FALSE, 
+         style = "stacked", 
+         main = "Effect of Education on Probability of Religious Importance",
+         ylab = "Probability of Importance Response")
 
 #2: Visualization from effects package
 # In this example, you want to examine education and abortion variables 
@@ -425,15 +436,15 @@ plot(Effect(focal.predictors = c("education", "abortion"),
 
 # Providing the values desired: here setting binaries to median, and varying 
 # education to visualize edu's effect
-pred_data_8 <- data.frame(abortion = rep(median(canadian_election2$abortion),6),
-                          gender = rep(median(canadian_election2$gender),6),
-                          urban = rep(median(canadian_election2$urban),6),
+pred_data_8 <- data.frame(abortion = rep(median(canadian_election2$abortion), 6),
+                          gender = rep(median(canadian_election2$gender), 6),
+                          urban = rep(median(canadian_election2$urban), 6),
                           education = c(1, 2, 3, 4, 5, 6)) 
 
 # combining the predicted probabilities to the values provided above; by column
 ggdata <- cbind(pred_data_8, predict(canadian_election_fit2, pred_data_8, type = "probs"))
 
-# Checking 
+# Check 
 head(ggdata)
 head(pred_data_8)
 
@@ -443,8 +454,9 @@ ggdata2 <- melt(ggdata,
                 variable.name = "Level", 
                 value.name="Probability")
 
-ggdata2 # molten effect (not class) for use in ggplot
+ggdata2
 
+# Plot it
 ggdata2 %>% 
   ggplot(aes(x = education, y = Probability, colour = Level)) + 
   geom_line(size=1.2) + 
@@ -454,7 +466,7 @@ ggdata2 %>%
   scale_x_continuous(breaks = c(1, 2, 3, 4, 5, 6), 
                      labels=c("1", "2", "3", "4", "5", "6"))
 
-#4: Using ggeffects package
+# 4: Using ggeffects package
 ggdata3 <- ggpredict(canadian_election_fit2, terms = c("education"))
 
 # Use plot function to create the graph
@@ -465,10 +477,15 @@ plot(ggdata3) +
   scale_x_continuous(limits = c(1, 6), breaks = seq(1:6)) +
   labs(x = "Education",
        y = "Predicted probability of Importance") +
-  theme_bw() 
+  theme_bw()
 
-# Or, you can also use ggplot like this:
-ggdata3 %>% 
-  ggplot(aes(x, predicted)) +
-  geom_line() +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = .1)
+# Another example
+ggdata4 <- ggpredict(world_values_fit2, terms = c("age"))
+
+# Use plot function to create the graph
+plot(ggdata4) +
+  scale_x_continuous(limits = c(18, 92), breaks = seq(18, 92, by = 10)) +
+  labs(x = "Age",
+       y = "Predicted probability of poverty",
+       title = "") +
+  theme_bw()
