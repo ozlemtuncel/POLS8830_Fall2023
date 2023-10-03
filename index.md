@@ -123,7 +123,7 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 [Ozlem's notes from Week 7 class](docs/week7*.md) 
 
 ### Software and others 
-- Interpretation of ordinal models is tricky! So, I have a couple of resources you might want to check. [Source 1](https://stats.oarc.ucla.edu/r/dae/ordinal-logistic-regression/), [Source 2](https://peopleanalytics-regression-book.org/gitbook/ord-reg.html#testing-the-proportional-odds-assumption), [Source 3](https://user2021.r-project.org/participation/technical_notes/t186/technote/), [Source 4](https://www.r-bloggers.com/2019/06/how-to-perform-ordinal-logistic-regression-in-r/), and [Source 4](https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html).
+- Interpretation of ordinal models is tricky! So, I have a couple of resources you might want to check. [Source 1](https://stats.oarc.ucla.edu/r/dae/ordinal-logistic-regression/), [Source 2](https://peopleanalytics-regression-book.org/gitbook/ord-reg.html#testing-the-proportional-odds-assumption), [Source 3](https://user2021.r-project.org/participation/technical_notes/t186/technote/), [Source 4](https://www.r-bloggers.com/2019/06/how-to-perform-ordinal-logistic-regression-in-r/), and [Source 5](https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html).
 
 ## Week 8
 
