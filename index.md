@@ -111,6 +111,8 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 
 [Ozlem's notes from Week 6 class](docs/week6.md) 
 
+R script for Week 6: [Script I](docs/Week6_Graphs_and_Interactions_tidy_updated.R)
+
 ### Software and others
 - Interpreting log-odds is tricky! Hence, I have these sources for you to help with interpretation. [Source 1](https://clas.ucdenver.edu/marcelo-perraillon/sites/default/files/attached-files/perraillon_marginal_effects_lecture_lisbon.pdf), [Source 2](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/), [Source 3](https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html), [Source 4](https://cran.r-project.org/web/packages/margins/vignettes/TechnicalDetails.pdf), [Source 5](https://www.andrewheiss.com/blog/2022/05/20/marginalia/#what-about-marginal-things-in-statistics), [Source 6](https://www.princeton.edu/~otorres/Margins.pdf), [Source 7](https://strengejacke.github.io/ggeffects/articles/introduction_marginal_effects.html), [Source 8](https://ds4ps.org/PROG-EVAL-III/LogisticReg.html)
 - Also, I recommend reading articles that use marginal effects and predicted probabilities for inspiration. Here are 4 different examples that I found for you: [Brambor, Clark, and Golder, 2017](https://www.cambridge.org/core/journals/political-analysis/article/understanding-interaction-models-improving-empirical-analyses/9BA57B3720A303C61EBEC6DDFA40744B), [Kavasoglu 2021](https://www.tandfonline.com/doi/full/10.1080/13510347.2021.1994552), [Green and Haber 2006](https://journals.sagepub.com/doi/full/10.1177/1354068816655570), [Kluver and Spoon, 2016](https://journals.sagepub.com/doi/full/10.1177/1354068815627399?casa_token=yGoJjMB2nVAAAAAA%3ATmJLQV-jDdSrSh9Nogxu7zvYDEgifQM32HH5xD8wJS-rAunKWZsYlnI6bdQ_EjlbDDB8prmOWJM). These might not be about your own research, but you might find them useful.
@@ -118,12 +120,13 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 ## Week 7
 
 ### Class materials 
-[Week 7 Slides](docs/)
+[Week 7 Slides](docs/07Ordinal.pdf)
 
-[Ozlem's notes from Week 7 class](docs/week7*.md) 
+R script for Week 7: [Script I](docs/Week7_Ordinal_Models_tidy.R)
 
 ### Software and others 
 - Interpretation of ordinal models is tricky! So, I have a couple of resources you might want to check. [Source 1](https://stats.oarc.ucla.edu/r/dae/ordinal-logistic-regression/), [Source 2](https://peopleanalytics-regression-book.org/gitbook/ord-reg.html#testing-the-proportional-odds-assumption), [Source 3](https://user2021.r-project.org/participation/technical_notes/t186/technote/), [Source 4](https://www.r-bloggers.com/2019/06/how-to-perform-ordinal-logistic-regression-in-r/), and [Source 5](https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html).
+- [Training Computational Social Science PhD Students for Academic and Non-Academic Careers](https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057?utm_source=hootsuite&utm_medium=twitter&utm_campaign=PSC_Sep23)
 
 ## Week 8
 
