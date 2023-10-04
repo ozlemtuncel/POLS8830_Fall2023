@@ -133,9 +133,10 @@ R script for Week 7: [Script I](docs/Week7_Ordinal_Models_tidy.R)
 ### Class materials 
 [Week 8 Slides](docs/)
 
-[Ozlem's notes from Week 8 class](docs/week8*.md) 
+R script for Week 8: [Script I](docs/Week8_Multinomial_Models_tidy.R) & [Script II](docs/Multinomial Models.R)
 
 ### Software and others 
+- I have a couple of resources you might want to check for interpretation. [Source 1 (dfidx package)](https://cran.r-project.org/web/packages/dfidx/vignettes/dfidx.html), [Source 2 (nnet package)](https://cran.r-project.org/web/packages/nnet/index.html), [Source 3 (mlogit package)](https://cran.r-project.org/web/packages/mlogit/index.html), [Source 4](https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/), [Source 5](https://www.princeton.edu/~otorres/LogitR101.pdf), [Source 6](https://www.utstat.toronto.edu/~brunner/oldclass/appliedf17/lectures/2101f17MultinomialLogitWithR.pdf).
 
 ## Week 9
 
