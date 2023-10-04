@@ -72,7 +72,6 @@ multinom_model <- multinom(vote ~ gender + age + economic.cond.national +
                            Hess = TRUE)
 
 # Hess argument helps us to get standard errors.
-
 stargazer(multinom_model, type = "text")
 
 # Since there is no logical order in our dependent variable, we can change the 
@@ -101,22 +100,24 @@ summary(mnC)
 ggpredict(mnD, terms = c("economic.cond.national")) %>% plot()
 ggpredict(mnL, terms = c("economic.cond.national")) %>% plot()
 ggpredict(mnC, terms = c("economic.cond.national")) %>% plot()
+
 # The multinom() function does not provide p-values! You can get significance of 
 # the coefficients using the stargazer() function. You can either manually 
 # calculate p-values using the following code: 
 
-# Calculating z-value
+# Calculating z value (or student's t for smaller samples)
 mnDz <- summary(mnD)$coefficients/summary(mnD)$standard.errors
 mnLz <- summary(mnL)$coefficients/summary(mnL)$standard.errors
 mnCz <- summary(mnC)$coefficients/summary(mnC)$standard.errors
 
 # Calculating p-values (here we are performing two-tailed z test)
-mnDp <- (1 - pnorm(abs(mnDz), 0, 1)) * 2
-mnLp <- (1 - pnorm(abs(mnLz), 0, 1)) * 2
-mnCp <- (1 - pnorm(abs(mnCz), 0, 1)) * 2
+# In this formula we first calculate on tail and multiply it with 2
+mnDp <- (1 - pnorm(abs(mnDz), mean = 0, sd = 1)) * 2
+mnLp <- (1 - pnorm(abs(mnLz), mean = 0, sd = 1)) * 2
+mnCp <- (1 - pnorm(abs(mnCz), mean = 0, sd = 1)) * 2
 
 # Or, you can use stargazer to print results table with p-values
-stargazer(mnD, mnL, mnC, type = "text")
+stargazer(mnD, mnL, mnC, type = "text", report = "vcsp*")
 
 # As you can see, there are 6 columns in this model. In columns 1 and 2, the
 # reference group is Liberal Democrats, In columns 3 and 4, the reference group
@@ -165,7 +166,7 @@ plot(predicted_multinom) +
 national_effect <- Effect("economic.cond.national", multinom_model)
 
 plot(national_effect, 
-     rug = FALSE, 
+     rug = TRUE, 
      main = "Effect of National Economic Condition on \n Vote Choice",
      xlab = "National Economic Condition",
      ylab = "Predicted Probability of Vote")
@@ -187,19 +188,29 @@ ggpredict(multinom_model,
           terms = "gender", 
           condition = c(age = 54,
                         economic.cond.household = 3, 
-                        economic.cond.national = 3)) %>% 
+                        economic.cond.national = 3)) |>  
   plot()
 
 # But this plot does not have confidence interval! So, I would not interpret
-# this graph at this moment. So, I am going to use another function for this. 
+# this graph at this moment. So, I am going to use another function for this.
+british_election$gender <- as.factor(british_election$gender) # I had to run this again
 
+economy_effect <- Effect("economic.cond.national", multinom_model)
+
+plot(economy_effect, 
+     rug = FALSE,
+     main = "Effect of National Economic Condition on Vote Choice",
+     xlab = "National Economic Condition",
+     ylab = "Predicted probabilities of vote")
+
+# Let's try a variable -- not significant one
 gender_effect <- Effect("gender", multinom_model)
 
 plot(gender_effect, 
      rug = FALSE, 
      main = "Effect of Gender on Vote Choice",
      xlab = "Gender",
-     ylab = "Predicted probability of vote")
+     ylab = "Predicted probabilities of vote")
 
 # As you can see confidence intervals overlap, and we do not see any difference
 # between male and female voters. 
@@ -242,6 +253,7 @@ head(idxData, 6)
 
 # Let's run the mlogit model which has 3 sections in the formula: 
 # See mlogit package's page 9 for understanding this
+# the first and third are alternative-specific
 mmm <- mlogit(vote ~ 0 | age + economic.cond.national + economic.cond.household + 
                 gender | 0, 
               data = idxData)
@@ -305,7 +317,6 @@ mnCmpro <- mlogit(vote ~ 0 | age + economic.cond.national + economic.cond.househ
                   data = mlogdata, 
                   id = id1, 
                   probit = TRUE)
-
 
 ### NOTES 1 - Russ's version for predicted probabilities ----
 # Creating data frame for predicted probabilities - varying 
@@ -436,6 +447,7 @@ effect.plot.3 <- plot(fit.eff.3,
                       rug=FALSE, 
                       main="Effect of Perception of National Economic Health on \n Vote Choice: Baseline of Conservative")
 
-effect.plot.1
+pred_data
 effect.plot.2
 effect.plot.3
+
