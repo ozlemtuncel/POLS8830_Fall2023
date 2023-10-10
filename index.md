@@ -127,6 +127,7 @@ R script for Week 7: [Script I](docs/Week7_Ordinal_Models_tidy.R)
 ### Software and others 
 - Interpretation of ordinal models is tricky! So, I have a couple of resources you might want to check. [Source 1](https://stats.oarc.ucla.edu/r/dae/ordinal-logistic-regression/), [Source 2](https://peopleanalytics-regression-book.org/gitbook/ord-reg.html#testing-the-proportional-odds-assumption), [Source 3](https://user2021.r-project.org/participation/technical_notes/t186/technote/), [Source 4](https://www.r-bloggers.com/2019/06/how-to-perform-ordinal-logistic-regression-in-r/), and [Source 5](https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html).
 - [Training Computational Social Science PhD Students for Academic and Non-Academic Careers](https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057?utm_source=hootsuite&utm_medium=twitter&utm_campaign=PSC_Sep23)
+- Here is a nice application of ordinal models: [Williams et al. 2021](https://www.sciencedirect.com/science/article/pii/S0261379420300883)
 
 ## Week 8
 
