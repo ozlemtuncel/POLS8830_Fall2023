@@ -132,7 +132,7 @@ R script for Week 7: [Script I](docs/Week7_Ordinal_Models_tidy.R)
 ## Week 8
 
 ### Class materials 
-[Week 8 Slides](docs/)
+[Week 8 Slides](docs/08multinomial.pdf)
 
 R script for Week 8: [Script I](docs/Week8_Multinomial_Models_tidy.R) & [Script II](docs/Multinomial Models.R)
 
@@ -142,11 +142,16 @@ R script for Week 8: [Script I](docs/Week8_Multinomial_Models_tidy.R) & [Script 
 ## Week 9
 
 ### Class materials 
-[Week 9 Slides](docs/)
+[Week 9 Slides](docs/10Count.pdf)
 
-[Ozlem's notes from Week 9 class](docs/week9*.md) 
+R script for Week 9: [Script I](docs/Week9_Hazard_Models_tidy.R)
 
 ### Software and others 
+- Most comprehensive list of packages and functions related to hazard models: [Source 1](https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/)
+- If you are planning to use survival analysis in your final paper, read this book by [Box-Steffensmeier & Jones](https://www.cambridge.org/core/books/event-history-modeling/4CD04448EB7CD70B47C8D43FC2AFDE17). [This little green book](https://www.amazon.com/Event-History-Survival-Analysis-Longitudinal-ebook/dp/B00JXZ2XVC/ref=sr_1_11?crid=3LDN0GJFW9I9V&keywords=Survival+Analysis&qid=1697041732&s=digital-text&sprefix=survival+analysis%2Cdigital-text%2C79&sr=1-11) is also great source.
+- Emily Zabor's [guide on survival analyis](https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html) is super comprehensive and helpful.
+- Great explanation of [left and right cencoring](https://www.quantics.co.uk/blog/introduction-survival-analysis-clinical-trials/).
+- Several other sources that I found really helpful for understanding survival analysis theoretically and application in R: [Source 1](https://spia.uga.edu/faculty_pages/rbakker/pols8501/OxfordOneNotes.pdf), [Source 2](https://socialsciences.mcmaster.ca/jfox/Books/Companion/appendices/Appendix-Cox-Regression.pdf), [Source 3](https://rpubs.com/auraf285/SurvAnalysisR)
 
 ## Week 10
 
