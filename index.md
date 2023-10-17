@@ -142,7 +142,7 @@ R script for Week 8: [Script I](docs/Week8_Multinomial_Models_tidy.R) & [Script 
 ## Week 9
 
 ### Class materials 
-[Week 9 Slides](docs/10Count.pdf)
+[Week 9 Slides](docs/10Duration.pdf)
 
 R script for Week 9: [Script I](docs/Week9_Hazard_Models_tidy.R)
 
@@ -151,17 +151,22 @@ R script for Week 9: [Script I](docs/Week9_Hazard_Models_tidy.R)
 - If you are planning to use survival analysis in your final paper, read this book by [Box-Steffensmeier & Jones](https://www.cambridge.org/core/books/event-history-modeling/4CD04448EB7CD70B47C8D43FC2AFDE17). [This little green book](https://www.amazon.com/Event-History-Survival-Analysis-Longitudinal-ebook/dp/B00JXZ2XVC/ref=sr_1_11?crid=3LDN0GJFW9I9V&keywords=Survival+Analysis&qid=1697041732&s=digital-text&sprefix=survival+analysis%2Cdigital-text%2C79&sr=1-11) is also great source.
 - Emily Zabor's [guide on survival analyis](https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html) is super comprehensive and helpful.
 - Great explanation of [left and right cencoring](https://www.quantics.co.uk/blog/introduction-survival-analysis-clinical-trials/).
-- Several other sources that I found really helpful for understanding survival analysis theoretically and application in R: [Source 1](https://spia.uga.edu/faculty_pages/rbakker/pols8501/OxfordOneNotes.pdf), [Source 2](https://socialsciences.mcmaster.ca/jfox/Books/Companion/appendices/Appendix-Cox-Regression.pdf), [Source 3](https://rpubs.com/auraf285/SurvAnalysisR), [Source 3](https://shariq-mohammed.github.io/files/cbsa2019/1-intro-to-survival.html), [Source 4](http://www.sthda.com/english/wiki/cox-proportional-hazards-model), [Source 5](https://bookdown.org/drki_musa/dataanalysis/survival-analysis-kaplan-meier-and-cox-proportional-hazard-ph-regression.html)
+- Several other sources that I found really helpful for understanding survival analysis theoretically and application in R: [Source 1](https://spia.uga.edu/faculty_pages/rbakker/pols8501/OxfordOneNotes.pdf), [Source 2](https://socialsciences.mcmaster.ca/jfox/Books/Companion/appendices/Appendix-Cox-Regression.pdf), [Source 3](https://rpubs.com/auraf285/SurvAnalysisR), [Source 3](https://shariq-mohammed.github.io/files/cbsa2019/1-intro-to-survival.html), [Source 4](http://www.sthda.com/english/wiki/cox-proportional-hazards-model), [Source 5](https://bookdown.org/drki_musa/dataanalysis/survival-analysis-kaplan-meier-and-cox-proportional-hazard-ph-regression.html), [Source 6](https://www.youtube.com/watch?v=Wo9RNcHM_bs&ab_channel=DATAtab)
 - [Example article for survival analysis](https://journals.sagepub.com/doi/full/10.1177/0022343315618001#fig4-0022343315618001)
 
 ## Week 10
 
 ### Class materials 
-[Week 10 Slides](docs/)
+[Week 10 Slides](docs/10Count)
 
-[Ozlem's notes from Week 10 class](docs/week10*.md) 
+R script for Week 9: [Script I](docs/Week10_Count_Models_tidy.R)
 
 ### Software and others 
+- Overdispersion explained with an example: [here](https://biometry.github.io/APES//LectureNotes/2016-JAGS/Overdispersion/OverdispersionJAGS.html)
+- Better explanation of GLM with zero inflation: [here](https://fukamilab.github.io/BIO202/04-C-zero-data.html)
+- Null vs residual deviance meaning: [here](https://stats.stackexchange.com/questions/108995/interpreting-residual-and-null-deviance-in-glm-r#:~:text=The%20null%20deviance%20shows%20how,when%20the%20predictors%20are%20included.)
+- Several resources useful for conducting count analysis in R: [Source 1](https://rcompanion.org/handbook/J_01.html), [Source 2](https://cran.r-project.org/web/packages/pscl/vignettes/countreg.pdf), [Source 3](https://stats.oarc.ucla.edu/r/dae/poisson-regression/), [Source 4](https://stats.oarc.ucla.edu/r/dae/negative-binomial-regression/), [Source 5](https://francish.net/post/poisson-and-negative-binomial-regression-using-r/), [Source 6](https://stats.oarc.ucla.edu/r/dae/zip/), [Source 7](https://stats.oarc.ucla.edu/r/dae/zinb/)
+- Two article examples: [Example 1](https://journals.sagepub.com/doi/pdf/10.1177/0022343304044474?casa_token=SrE2-J1AMSUAAAAA:KrRmmIyaSPCrQJOb3mOOTda0k2n83iMt23KfnrbgXip5NQ8VD3cB6uwa5A9LdYSBicQ180XGeQw) and [Example 2](https://journals.sagepub.com/doi/full/10.1177/0022343314523027)
 
 ## Week 11
 
