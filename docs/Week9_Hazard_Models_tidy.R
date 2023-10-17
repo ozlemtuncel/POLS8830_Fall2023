@@ -28,6 +28,7 @@ library(reshape2)  # Manipulating data
 library(eha)       # Extensions of survival
 
 ### Upload data ----
+#https://cran.r-project.org/web/packages/survival/index.html
 rott <- survival::rotterdam # Loading in the data
 
 # we need to first identify key variables for our analysis. In this case this is the time variable and the event or failure variable. We use *Surv()* function for this (STATA equivalent of this command is stset). 
@@ -48,7 +49,7 @@ cox_m1 <- coxph(status ~ chemo + size + age, data = rott)
 # We can identify the key variables within the function:
 cox_m1 <- coxph(Surv(rott$dtime, rott$death) ~ chemo + size + age, data = rott)
 summary(cox_m1)
-stargazer(cox_m1, type = "text")
+stargazer(cox_m1, type = "text") # this is problematic
 
 # In R, we need to look at the exp(coef) column to find hazard ratios. 
 
@@ -88,7 +89,7 @@ survfit(cox_m1, data = rott) %>%
 
 # Interpretation: As time progress, the probability of survival from breast 
 # cancer decreases. Half of the sample is either dead or no longer participating
-# in the research after 2000 days. 
+# in the research after 2500 days. 
 
 # Median survival: half of the patients survived until 4000 days. 
 
@@ -114,6 +115,15 @@ ggsurvplot(survfit(cox_m1, newdata = chemo_data),
            break.y.by = 0.1)
 
 # Interpretation: If we take chemo treatment into account we see that after a certain point in time (around 1500 days) there is a clear difference in terms of survival probability. For those who received chemo, half of the patients survived less than those who did not received chemo.  
+
+### Log-Rank test ----
+# Tests time-to-even between two groups 
+# Before in Kaplan-Meier plot we saw that there is a difference between receiving chemo or not
+# But, is it statistically significant
+
+survdiff(Surv(rott$dtime, rott$death) ~ rott$chemo)
+
+# Interpret p-value -- no significant difference between these two groups
 
 # Let's take age into account as well and creating data for survplot
 age_data <- with(rott,
@@ -159,7 +169,8 @@ ggsurvplot(survfit(cox_m1,
 # In principle, the Schoenfeld residuals are independent of time. 
 # A plot that shows a non-random pattern against time is evidence of violation of the PH assumption.
 
-# The proportional hazard assumption is supported by a non-significant relationship between residuals and time, and refuted by a significant relationship. So, if we cannot reject the null (p < 0.05), our proportional hazards assumption is reasonable. 
+# The proportional hazard assumption is supported by a non-significant relationship between residuals and time, and refuted by a significant relationship. 
+# So, if we cannot reject the null (p < 0.05), our proportional hazards assumption is reasonable. 
 
 # Having very small p values indicates that there are time dependent coefficients 
 # which you need to take care of. That is to say, the proportionality assumption 
@@ -172,6 +183,7 @@ ggcoxzph(cox.zph(cox_m1))
 
 # To test influential observations or outliers
 ggcoxdiagnostics(cox_m1)
+
 # Positive values correspond to individuals that “died too soon” compared to expected survival times. Negative values correspond to individual that “lived too long”. Very large or small values are outliers, which are poorly predicted by the model.
 
 # Testing non-linearity
@@ -196,6 +208,7 @@ stargazer(w1, e1 ,
           )
 )
 
+### NOTES
 ### Postestimation and validation ----
 
 # Log(survival time) against time
@@ -229,7 +242,6 @@ phw <- phreg(status ~ meno + grade + age, data = rott)
 
 check.dist(cox, phw) 
 
-### NOTES
 # Weibull version ----
 sample1 <- as.data.frame(rweibull(10000, 1, 1))
 names(sample1) <- "Weibull"
