@@ -18,7 +18,7 @@ layout: default
 
 # Slides, Notes, and Tips
 
-## Week 1
+## Week 1: Syllabus Overview
 > ✔️ Goal: Review of the syllabus and last semester.
 
 ### Class materials 
@@ -49,7 +49,7 @@ You can alternatively learn and use **R Markdown** or **Quarto**. Here are some 
 - [Using Quarto in R](https://quarto.org/docs/get-started/hello/rstudio.html)
 - Posit's (previously known as R Studio) guide to [R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
-## Week 2
+## Week 2: OLS Review
 
 ### Class materials 
 [Week 2 Slides](docs/Week 2 OLS Slides.pdf)
@@ -62,7 +62,7 @@ R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) &
 - Here is a [website](https://www.rpubs.com/elliottb90/olsassumptions) that shows how to use plots to identify OLS assumptions.
 - Here is a [comparison of probability mass and density functions](https://tinyheero.github.io/2016/03/17/prob-distr.html#properties-of-probability-massdensity-functions).
 
-## Week 3
+## Week 3: MLE Introduction
 
 ### Class materials 
 [Week 3 Slides](docs/03MLE.pdf) and [Carlin's Notes](docs/Week 4 MLE & GLM.ppt)
@@ -71,7 +71,7 @@ R scripts for Week 2: [Script I](docs/Week2_Linear_Regression_Addendum_tidy.R) &
 
 We do not have any R script for this week.
 
-## Week 4
+## Week 4: Binary Logit
 
 ### Class materials 
 [Week 4 Slides](docs/05Logit.pdf)
@@ -89,7 +89,7 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 - I recommend checking [Zelig](http://docs.zeligproject.org/) in detail if you are going to use logistic regression a lot.
 - I also recommend this [Shiny app](https://xiangao.netlify.app/2017/10/26/rare-event/) for comparing logit, rare events, and Firth penalized MLE models.
 
-## Week 5
+## Week 5: Workflow in PoliSci
 
 ### Class materials 
 [Week 5 Slides](docs/Workflow_in_PoliSci_Research.pdf)
@@ -104,7 +104,7 @@ R scripts for Week 4: [Script I](docs/Week4_Logit_Probit_Models_tidy.R) & [Scrip
 - I learned using GitHub with R using [this Happy Git with R book](https://happygitwithr.com/).
 - I created these two bug fix files for Zelig and DAMisc packages that are not on CRAN anymore. [Zelig lazy load](docs/Zelig_bug_fix.R) & [DAMisc lazy load](docs/DAMisc_bug_fix.R)
 
-## Week 6
+## Week 6: Interactions
 
 ### Class materials 
 [Week 6 Slides](docs/06Substantive.pdf)
@@ -117,7 +117,7 @@ R script for Week 6: [Script I](docs/Week6_Graphs_and_Interactions_tidy_updated.
 - Interpreting log-odds is tricky! Hence, I have these sources for you to help with interpretation. [Source 1](https://clas.ucdenver.edu/marcelo-perraillon/sites/default/files/attached-files/perraillon_marginal_effects_lecture_lisbon.pdf), [Source 2](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/), [Source 3](https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html), [Source 4](https://cran.r-project.org/web/packages/margins/vignettes/TechnicalDetails.pdf), [Source 5](https://www.andrewheiss.com/blog/2022/05/20/marginalia/#what-about-marginal-things-in-statistics), [Source 6](https://www.princeton.edu/~otorres/Margins.pdf), [Source 7](https://strengejacke.github.io/ggeffects/articles/introduction_marginal_effects.html), [Source 8](https://ds4ps.org/PROG-EVAL-III/LogisticReg.html)
 - Also, I recommend reading articles that use marginal effects and predicted probabilities for inspiration. Here are 4 different examples that I found for you: [Brambor, Clark, and Golder, 2017](https://www.cambridge.org/core/journals/political-analysis/article/understanding-interaction-models-improving-empirical-analyses/9BA57B3720A303C61EBEC6DDFA40744B), [Kavasoglu 2021](https://www.tandfonline.com/doi/full/10.1080/13510347.2021.1994552), [Green and Haber 2006](https://journals.sagepub.com/doi/full/10.1177/1354068816655570), [Kluver and Spoon, 2016](https://journals.sagepub.com/doi/full/10.1177/1354068815627399?casa_token=yGoJjMB2nVAAAAAA%3ATmJLQV-jDdSrSh9Nogxu7zvYDEgifQM32HH5xD8wJS-rAunKWZsYlnI6bdQ_EjlbDDB8prmOWJM). These might not be about your own research, but you might find them useful.
 
-## Week 7
+## Week 7: Ordinal Models
 
 ### Class materials 
 [Week 7 Slides](docs/07Ordinal.pdf)
@@ -129,7 +129,7 @@ R script for Week 7: [Script I](docs/Week7_Ordinal_Models_tidy.R)
 - [Training Computational Social Science PhD Students for Academic and Non-Academic Careers](https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057?utm_source=hootsuite&utm_medium=twitter&utm_campaign=PSC_Sep23)
 - Here is a nice application of ordinal models: [Williams et al. 2021](https://www.sciencedirect.com/science/article/pii/S0261379420300883)
 
-## Week 8
+## Week 8: Multinomial Models
 
 ### Class materials 
 [Week 8 Slides](docs/08multinomial.pdf)
@@ -139,7 +139,7 @@ R script for Week 8: [Script I](docs/Week8_Multinomial_Models_tidy.R) & [Script 
 ### Software and others 
 - I have a couple of resources you might want to check for interpretation. [Source 1 (dfidx package)](https://cran.r-project.org/web/packages/dfidx/vignettes/dfidx.html), [Source 2 (nnet package)](https://cran.r-project.org/web/packages/nnet/index.html), [Source 3 (mlogit package)](https://cran.r-project.org/web/packages/mlogit/index.html), [Source 4](https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/), [Source 5](https://www.princeton.edu/~otorres/LogitR101.pdf), [Source 6](https://www.utstat.toronto.edu/~brunner/oldclass/appliedf17/lectures/2101f17MultinomialLogitWithR.pdf).
 
-## Week 9
+## Week 9: Survival Analysis
 
 ### Class materials 
 [Week 9 Slides](docs/10Duration.pdf)
@@ -151,10 +151,10 @@ R script for Week 9: [Script I](docs/Week9_Hazard_Models_tidy.R)
 - If you are planning to use survival analysis in your final paper, read this book by [Box-Steffensmeier & Jones](https://www.cambridge.org/core/books/event-history-modeling/4CD04448EB7CD70B47C8D43FC2AFDE17). [This little green book](https://www.amazon.com/Event-History-Survival-Analysis-Longitudinal-ebook/dp/B00JXZ2XVC/ref=sr_1_11?crid=3LDN0GJFW9I9V&keywords=Survival+Analysis&qid=1697041732&s=digital-text&sprefix=survival+analysis%2Cdigital-text%2C79&sr=1-11) is also great source.
 - Emily Zabor's [guide on survival analyis](https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html) is super comprehensive and helpful.
 - Great explanation of [left and right cencoring](https://www.quantics.co.uk/blog/introduction-survival-analysis-clinical-trials/).
-- Several other sources that I found really helpful for understanding survival analysis theoretically and application in R: [Source 1](https://spia.uga.edu/faculty_pages/rbakker/pols8501/OxfordOneNotes.pdf), [Source 2](https://socialsciences.mcmaster.ca/jfox/Books/Companion/appendices/Appendix-Cox-Regression.pdf), [Source 3](https://rpubs.com/auraf285/SurvAnalysisR), [Source 3](https://shariq-mohammed.github.io/files/cbsa2019/1-intro-to-survival.html), [Source 4](http://www.sthda.com/english/wiki/cox-proportional-hazards-model), [Source 5](https://bookdown.org/drki_musa/dataanalysis/survival-analysis-kaplan-meier-and-cox-proportional-hazard-ph-regression.html), [Source 6](https://www.youtube.com/watch?v=Wo9RNcHM_bs&ab_channel=DATAtab)
+- Several other sources that I found really helpful for understanding survival analysis theoretically and application in R: [Source 1](https://spia.uga.edu/faculty_pages/rbakker/pols8501/OxfordOneNotes.pdf), [Source 2](https://socialsciences.mcmaster.ca/jfox/Books/Companion/appendices/Appendix-Cox-Regression.pdf), [Source 3](https://rpubs.com/auraf285/SurvAnalysisR), [Source 4](https://shariq-mohammed.github.io/files/cbsa2019/1-intro-to-survival.html), [Source 5](http://www.sthda.com/english/wiki/cox-proportional-hazards-model), [Source 6](https://bookdown.org/drki_musa/dataanalysis/survival-analysis-kaplan-meier-and-cox-proportional-hazard-ph-regression.html), [Source 7](https://www.youtube.com/watch?v=Wo9RNcHM_bs&ab_channel=DATAtab)
 - [Example article for survival analysis](https://journals.sagepub.com/doi/full/10.1177/0022343315618001#fig4-0022343315618001)
 
-## Week 10
+## Week 10: Count Models
 
 ### Class materials 
 [Week 10 Slides](docs/10Count)
