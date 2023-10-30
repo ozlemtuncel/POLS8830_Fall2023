@@ -164,7 +164,7 @@ R script for Week 9: [Script I](docs/Week9_Hazard_Models_tidy.R)
 ### Class materials 
 [Week 10 Slides](docs/10Count)
 
-R script for Week 9: [Script I](docs/Week10_Count_Models_tidy.R)
+R script for Week 9: [Script I](docs/Week10_Count_Models_tidy.R) & [Dataset](docs/terrorism_data.Rdata)
 
 ### Software and others 
 - Overdispersion explained with an example: [here](https://biometry.github.io/APES//LectureNotes/2016-JAGS/Overdispersion/OverdispersionJAGS.html)
@@ -176,11 +176,12 @@ R script for Week 9: [Script I](docs/Week10_Count_Models_tidy.R)
 ## Week 11
 
 ### Class materials 
-[Week 11 Slides](docs/)
+[Week 11 Slides](docs/Multilevel.pdf)
 
-[Ozlem's notes from Week 11 class](docs/week11*.md) 
-
-### Software and others 
+### Software and others
+- We do not have any R script to run for this week, but I will be doing a session where I replicate one of the problem sets.
+- Two things can be useful this week. The first one is the [grammar of graphics](https://psu-psychology.github.io/r-bootcamp-2019/talks/ggplot_grammar.html). You really need to understanding underlying layers of the ggplot so that you can confidently modify your figures.
+- The second one is the [EDA](https://bookdown.org/steve_midway/DAR/exploratory-data-analysis.html). I have few other sources that might help you to be knowledgable about your data: [source 2](https://r4ds.had.co.nz/exploratory-data-analysis.html) and [source 3](https://www.modernstatisticswithr.com/). 
 
 ## Week 12
 
