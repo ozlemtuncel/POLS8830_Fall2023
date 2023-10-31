@@ -184,6 +184,7 @@ R script for Week 9: [Script I](docs/Week10_Count_Models_tidy.R) & [Dataset](doc
 - The second one is the [EDA](https://bookdown.org/steve_midway/DAR/exploratory-data-analysis.html). I have few other sources that might help you to be knowledgable about your data: [source 2](https://r4ds.had.co.nz/exploratory-data-analysis.html) and [source 3](https://www.modernstatisticswithr.com/).
 - Here is a stackoverflow answer to understand the different between **fixed-effects** and **clustering**: [read Alex P. Miller's answer here](https://stats.stackexchange.com/questions/185378/when-to-use-fixed-effects-vs-using-cluster-ses)
 - Another great source for fixed effects vs clustering is this Abadie et al. (2017) paper which tells the same thing with the previous answer: [article link](https://www.nber.org/system/files/working_papers/w24003/w24003.pdf)
+- This book by Huntington-Klein is super useful if you want more info on fixed-effects: [book link](https://theeffectbook.net/ch-FixedEffects.html)
 
 ## Week 12
 
