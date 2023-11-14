@@ -186,11 +186,8 @@ R script for Week 9: [Script I](docs/Week10_Count_Models_tidy.R) & [Dataset](doc
 - Another great source for fixed effects vs clustering is this Abadie et al. (2017) paper which tells the same thing with the previous answer: [article link](https://www.nber.org/system/files/working_papers/w24003/w24003.pdf)
 - This book by Huntington-Klein is super useful if you want more info on fixed-effects: [book link](https://theeffectbook.net/ch-FixedEffects.html)
 
-## Week 12
+## Week 13: Student Presentations
 
-### Class materials 
-[Week 12 Slides](docs/)
-
-[Ozlem's notes from Week 12 class](docs/week12*.md) 
-
-### Software and others 
+## Sources
+- If you need templates for LaTeX, I have different templates prepared in [my website](https://ozlemtuncel.github.io/resources/).
+- Here is a great article on how to present better: [Smith and Salmond, 2011](https://www.jstor.org/stable/41319775).
